@@ -299,11 +299,21 @@ window.onload = function () {
 
   init();
 };
+// Get a reference to the audio element
+var backgroundMusic = document.getElementById("background-music");
+
+// Function to play background music
+function playBackgroundMusic() {
+  // Check if the audio is currently paused, and if so, play it
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+  }
+}
 
 function reveal() {
   document.querySelector(".merrywrap").style.backgroundColor = "transparent";
-
   loop();
+  playBackgroundMusic();
 
   var w, h;
   if (window.innerWidth >= 1000) {
