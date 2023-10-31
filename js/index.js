@@ -295,10 +295,13 @@ window.onload = function () {
     }
     setTimeout(openBox, stepMinutes[step - 1]);
     step++;
+    
   }
-
+  
   init();
 };
+
+
 // Get a reference to the audio element
 var backgroundMusic = document.getElementById("background-music");
 
@@ -310,11 +313,18 @@ function playBackgroundMusic() {
   }
 }
 
+
+var birthdayWish = document.getElementById("birthday-wish");
 function reveal() {
   document.querySelector(".merrywrap").style.backgroundColor = "transparent";
+  
+  var displayStyle = window.getComputedStyle(birthdayWish).getPropertyValue("display");
+
+  if (displayStyle === "none") {
+    birthdayWish.style.display = "block";
+  }
   loop();
   playBackgroundMusic();
-
   var w, h;
   if (window.innerWidth >= 1000) {
     w = 295;
