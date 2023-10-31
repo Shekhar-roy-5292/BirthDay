@@ -442,6 +442,9 @@ div#sea {
   .icons {
     left: 30px;
   }
+  p{
+    font-size: 22px;
+  }
 
   .icons .row span {
     font-size: 56px;
